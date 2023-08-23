@@ -9,5 +9,7 @@ package Controlador;
  * @author Student
  */
 public class Atender {
-    
+    public void Atender(){
+        
+    }
 }

@@ -11,7 +11,8 @@ import java.util.HashMap;
  * @author Student
  */
 public class AdministracionListaTickets extends AdministracionTickets {
- HashMap<Integer, Tipo> ticket = new HashMap();
+
+    HashMap<Integer, Tipo> ticket = new HashMap();
 
     public HashMap<Integer, Tipo> getTicket() {
         return ticket;
@@ -24,11 +25,21 @@ public class AdministracionListaTickets extends AdministracionTickets {
     public AdministracionListaTickets(Tipo tipo, int numero) {
         super(tipo, numero);
     }
- 
-    public boolean eliminar(int t, Tipo tipo) {
+
+    public boolean eliminarPorValue(Tipo t){
 
         if (this.ticket.isEmpty()) {
-            ticket.remove(t, tipo);
+            ticket.remove(t);
+            return true;
+        }
+        return false;
+
+    }
+
+    public boolean eliminarPorKey(int v) {
+
+        if (this.ticket.isEmpty()) {
+            ticket.remove(v);
             return true;
         }
         return false;
