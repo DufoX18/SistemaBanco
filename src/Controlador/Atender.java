@@ -4,12 +4,16 @@
  */
 package Controlador;
 
+import examenii.AdministracionListaTickets;
+import examenii.Tipo;
+
 /**
  *
  * @author Student
  */
-public class Atender {
-    public void Atender(){
-        
+public class Atender{
+
+    public void Atender() {
+   
     }
 }

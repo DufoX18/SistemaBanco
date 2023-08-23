@@ -26,20 +26,20 @@ public class AdministracionListaTickets extends AdministracionTickets {
         super(tipo, numero);
     }
 
-    public boolean eliminarPorValue(Tipo t){
+    public boolean eliminarPorValue(int numero, Tipo tipo) {
 
         if (this.ticket.isEmpty()) {
-            ticket.remove(t);
+            ticket.remove(numero, tipo);
             return true;
         }
         return false;
 
     }
 
-    public boolean eliminarPorKey(int v) {
+    public boolean eliminarPorKey(int numero) {
 
         if (this.ticket.isEmpty()) {
-            ticket.remove(v);
+            ticket.remove(numero);
             return true;
         }
         return false;
@@ -53,9 +53,9 @@ public class AdministracionListaTickets extends AdministracionTickets {
         return null;
     }
 
-    public boolean insertar(int t, Tipo tipo) {
-        if (this.ticket == null) {
-            ticket.put(t, tipo);
+    public boolean insertar(int numero, Tipo tipo) {
+        if (this.ticket == null && !this.ticket.containsKey(numero)) {
+            ticket.put(numero, tipo);
             return true;
         }
         return false;
